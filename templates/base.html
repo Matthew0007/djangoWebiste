@@ -28,7 +28,7 @@
                     <a class="nav-link text-dark" href="{% url 'contact' %}">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">Features</a>
+                        <a class="nav-link text-dark" href="{% url 'feedback_list' %}">Feedback</a>
                     </li>
                     <!--    if authenticated   -->
 
@@ -37,7 +37,7 @@
                             <a class="nav-link text-dark" href="{% url 'password_change' %}">Change Password</a>
                         </li>
                         <li class="nav-item ml-2">
-                            <a class="nav-link text-dark" href="{% url 'logout' %}">LOGOUT</a>
+                            <a class="nav-link text-dark" href="{% url 'logout' %}">Log out</a>
                     
                         </li>
                         <li class="nav-item ml-2">
@@ -49,10 +49,10 @@
 
                         
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="{% url 'signup' %}">Sign up</a>
+                        <a class="nav-link  btn btn-primary" href="{% url 'signup' %}">Sign up</a>
                     </li>
                     <li class="nav-item ml-2">
-                        <a class="nav-link text-dark" href="{% url 'login' %}">Login</a>
+                        <a class="nav-link  btn btn-danger" href="{% url 'login' %}">Login</a>
                     </li>
                 
                     {% endif %}

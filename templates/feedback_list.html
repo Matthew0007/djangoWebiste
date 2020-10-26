@@ -3,15 +3,13 @@
 
 {% block content %}
 
-{% for feedback in object_list %}
 
 
 
-<div class="row">
-    <div class="col-4">
 
-    </div>
-    <div class="col-4 ">
+
+    {% for feedback in object_list %}
+    <div class="col-12 ">
         <div class="card ">
             <div class="card-header">
                 {{feedback.user}}
@@ -19,19 +17,18 @@
             <div class="card-body">
                 <p class="card-text">{{feedback.feedback}}</p>
                 <p class="card-text small disabled">{{feedback.date}}</p>
+                <a href="{%url 'feedback_edit' feedback.pk%}" class="btn btn-primary">Edit</a>
+                <a href="{%url 'feedback_delete' feedback.pk%}" class="btn btn-danger">Delete</a>
 
-                <a href="" class="btn btn-primary">Edit</a>
-                <a href="" class="btn btn-danger">Delete</a>
-            </div>
-        </div>
-    </div>
+              </div>
+              </div>
+              <br>
+      
+        
     {% endfor %}
    
    
 
-    <div class="col-4">
-    
 
-    </div>
 </div>
 {% endblock content %}
