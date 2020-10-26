@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+<form method="post">
+    <h1 class="mb-5">Log In</h1>
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <button class="btn btn-danger ml-5" type="Login">Login</button>
+</form>
+
+
+{% endblock content %}
+
+
