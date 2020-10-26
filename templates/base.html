@@ -32,9 +32,9 @@
                 </li>
             </ul>
                     <!--    if authenticated   -->
-            
-            <ul class="navbar-nav ml-auto">
                 {% if user.is_authenticated %}
+            <ul class="navbar-nav ml-auto">
+                
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="{% url 'password_change' %}">Change Password</a>
                 </li>
@@ -44,7 +44,9 @@
                 <li class="nav-item ml-2">
                     <a class="nav-link disabled" href="#">{{user.username}}</a>
                 </li>
+            </ul>
                 {% else %}
+            <ul>
                 <!--   else    -->
                 <li class="nav-item">
                     <a class="nav-link  btn btn-primary" href="{% url 'signup' %}">Sign up</a>
