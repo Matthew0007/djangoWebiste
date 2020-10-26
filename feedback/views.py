@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from django.views.generic.edit import UpdateView, DeleteView
+from django.views.generic.edit import UpdateView, DeleteView, CreateView
 from .models import Feedback
 from django.urls import reverse_lazy
 
@@ -25,6 +25,11 @@ class FeedbackDeleteView(DeleteView):
 class FeedbackDetailView(DetailView):
     model = Feedback
     template_name = 'feedback_detail.html'
+
+class FeedbackCreateView(CreateView):
+    model = Feedback
+    fields = ('feedback','user',)
+    template_name = 'feedback_new.html'
     
 
 # Create your views here.
