@@ -3,37 +3,40 @@
 
 {% block content %}
 
-
-<div class="container">
-    <div class="row pt-5">
-        <div class="col-6 w-50">
-
-            <div class="jumbotron">
-                <img src="{% static 'images/Peter.jpg' %}">
-                
-            </div>
-            
-        </div>
-        <div class="col-6">
-            <h1 style="font-size: 100px;" class="font-weight-bolder ">Hello</h1>
-            <p style="font-size: 20px;" class="">Welcome to my site
+<div class="container-fluid">
+    <div class="row py-1 margin-top">
+   
+<div class="col">
+    <h1 style="font-size: 50px;" class="text-center">Photography Portfolio</h1>
+        <p style="font-size: 20px;" class="">Welcome to my site
                 Im Peter Brix, a good
-                and reputable pphotographer
+                and reputable photographer.
                 Please leave a comment on
                 my latest picture and leave
-                me feedback. Also sign and
+                me feedback. Also sign in and
                 leave a comment to, signing
                 in will allow you to have a login
                 in my site. Many thanks, and love
                 from the Peter Brix photography enterprise
-                chane, we love photography! </p>
-        </div>
-    </div>
+                chain, we love photography! </p>
+</div>
+</div>
+</div>
 
 
-    <div style="padding-top: 500px;" class="row">
-        <div class="col-4">
-            <div class="card" style="width: 18rem;">
+<div class="row py-3">
+    <div class="col-4">
+        <div class="card">
+            <img src="{% static 'images/Peter.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body pt-5">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-4">
+            <div class="card">
                 <img src="{% static 'images/Peter.jpg' %}" class="card-img-top" alt="...">
                 <div class="card-body pt-5">
                     <h5 class="card-title">Card title</h5>
@@ -43,18 +46,8 @@
                 </div>
             </div>
             <div class="col-4">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body pt-5">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="" class="card-img-top" alt="...">
+                <div class="card">
+                    <img src="{% static 'images/Peter.jpg' %}" class="card-img-top" alt="...">
                     <div class="card-body pt-5">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -62,6 +55,7 @@
                       </div>
                     </div>
                 </div>
+                
     </div>
 </div>
 
