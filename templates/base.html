@@ -22,18 +22,19 @@
 
         <nav class="navbar navbar-expand-sm bg-light">
 
-            <ul class="navbar-nav ">
-                <a class="navbar-brand text-danger " href="{% url 'home' %}"">Peter Brix</a>
-                <li class=" nav-item">
+            <ul class="navbar-nav">
+                <a class="navbar-brand text-danger " href="{% url 'home' %}">Peter Brix</a>
+                <li class="nav-item">
                     <a class="nav-link text-dark" href="{% url 'contact' %}">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="{% url 'feedback_list' %}">Feedback</a>
                     </li>
+            </ul>
                     <!--    if authenticated   -->
-
+                <ul class="navbar-nav ml-auto">
                     {% if user.is_authenticated %}
-                        <li class="nav-item">
+                        <li class="nav-item ml-auto">
                             <a class="nav-link text-dark" href="{% url 'password_change' %}">Change Password</a>
                         </li>
                         <li class="nav-item ml-2">
@@ -44,22 +45,24 @@
                             <a class="nav-link disabled" href="#">{{user.username}}</a>
                     
                         </li>
+                    </ul>
                     {% else %}
                          <!--   else    -->
 
-                        
-                    <li class="nav-item">
+                         <ul class="navbar-nav ml-auto"> 
+                    <li class="nav-item ml-auto">
                         <a class="nav-link  btn btn-primary" href="{% url 'signup' %}">Sign up</a>
                     </li>
                     <li class="nav-item ml-2">
                         <a class="nav-link  btn btn-danger" href="{% url 'login' %}">Login</a>
                     </li>
+                </ul>
                 
                     {% endif %}
     
                
 
-            </ul>
+            
            
         </nav>
         <div class="container">
