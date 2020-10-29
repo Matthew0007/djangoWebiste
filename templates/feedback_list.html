@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 
-
+{% load static %}
 {% block content %}
 
+<img style="margin-left: 16vw;" src="{% static 'images/Peter.jpg' %}" class="card-img-top-2 w-50" alt="...">
 
 
-
+<h1>Feedback</h1>
 
 {% if user.is_authenticated%}
     {% for feedback in object_list %}
