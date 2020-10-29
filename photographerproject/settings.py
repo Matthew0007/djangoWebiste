@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'pages',
     'accounts',
     'feedback',
+    'sendemail.apps.SendemailConfig',
 
 
     #THIRD PARTY 
@@ -140,4 +141,5 @@ LOGOUT_REDIRECT_URL = 'home'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+DEFAULT_FROM_EMAIL = 'x00179223@mytudublin.ie'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
