@@ -1,13 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content%}
+<script>
+    function loggedInAlert(){
+        alert("You are logged in!");
+    }
+</script>
 
 <form method="post">
     <h1 class="mb-5">Log In</h1>
     {% csrf_token %}
     {{form.as_p}}
 
-    <button class="btn btn-danger ml-5" type="Login">Login</button>
+    <button class="btn btn-danger ml-5" type="Login" onclick="loggedInAlert()">Login</button>
 </form>
 
 

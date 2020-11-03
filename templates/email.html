@@ -3,10 +3,16 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+
+<script>
+  function messageSentAlert(){
+    alert("Message sent!")
+  }
+</script>
 <h1>Contact Us!</h1>
   <form method="post" novalidate>
     {% csrf_token %}
     {{ form|crispy }}
-    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="submit" class="btn btn-success" onclick="messageSentAlert()">Submit</button>
   </form>
 {% endblock %}
