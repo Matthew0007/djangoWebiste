@@ -38,8 +38,6 @@
             <div class="card-body">
                 <p class="card-text">{{feedback.feedback}}</p>
                 <p class="card-text small disabled">{{feedback.date}}</p>
-                <a href="{%url 'feedback_edit' feedback.pk%}" class="btn btn-primary">Edit</a>
-                <a href="{%url 'feedback_delete' feedback.pk%}" class="btn btn-danger">Delete</a>
 
               </div>
               </div>
@@ -51,5 +49,4 @@
    
 
 
-</div>
 {% endblock content %}

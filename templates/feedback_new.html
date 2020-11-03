@@ -2,12 +2,18 @@
 
 {%block content%}
 
+<script>
+    function postSuccessAlert(){
+        alert("Feedback submitted!");
+    }
+</script>
+
 <h1>Submit Feedback</h1>
 
 <form action="" method="post">{%csrf_token%}
 
     {{ form.as_p }}
 
-    <button class="btn btn-danger" type="submit">Submit</button>
+    <button class="btn btn-danger" type="submit" onclick="postSuccessAlert()">Submit</button>
 </form>
 {% endblock content %}
