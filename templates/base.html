@@ -15,18 +15,17 @@
         crossorigin="anonymous"></script>
 </head>
 
+<script>
+    function loggedOutAlert(){
+        alert("You are logged out!")
+    }
+</script>
+
 <body>
-
-
-
-
     <div class="containter-fluid">
-
-
         <nav class="navbar navbar-expand-sm bg-light">
-
             <ul class="navbar-nav">
-                <a class="navbar-brand text-danger " href="{% url 'home' %}">Peter Brix</a>
+                    <a class="navbar-brand text-danger " href="{% url 'home' %}">Peter Brix</a>
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="{% url 'contact' %}">Contact</a>
                 </li>
@@ -39,20 +38,16 @@
                 {% if user.is_authenticated %}
                 <li class="nav-item ml-2">
                     <a class="nav-link disabled" href="#">{{user.username}}</a>
-
                 </li>
                 <li class="nav-item ml-auto">
                     <a class="nav-link btn btn-primary" href="{% url 'password_change' %}">Change Password</a>
                 </li>
                 <li class="nav-item ml-2">
-                    <a class="nav-link btn btn-danger" href="{% url 'logout' %}">Log out</a>
-
+                    <a class="nav-link btn btn-danger" href="{% url 'logout' %}" onclick="loggedOutAlert()">Log out</a>
                 </li>
-
             </ul>
             {% else %}
             <!--   else    -->
-
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item ml-auto">
                     <a class="nav-link  btn btn-primary" href="{% url 'signup' %}">Sign up</a>
@@ -61,18 +56,10 @@
                     <a class="nav-link  btn btn-danger" href="{% url 'login' %}">Login</a>
                 </li>
             </ul>
-
             {% endif %}
-
-
-
-
-
         </nav>
         <div class="container">
             {% block content %}
-
-
             {% endblock content %}
         </div>
 
@@ -92,5 +79,4 @@
         integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
         crossorigin="anonymous"></script>
 </body>
-
 </html>

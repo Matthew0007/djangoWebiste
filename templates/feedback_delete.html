@@ -5,8 +5,8 @@
 {%block content%}
 
 <script>
-    function messageDeletedAlert(){
-        alert("Message deleted!")
+    function feedbackDeletedAlert(){
+        alert("Feedback deleted!")
     }
 </script>
 <h1>
@@ -17,7 +17,7 @@
 <form action="" method="post">{%csrf_token%}
 
     <p>Are you sure you want to delete "{{feedback.feedback}}"</p>
-    <button class="btn btn-danger" type="submit" onclick="messageDeletedAlert()">Confirm</button>
+    <button class="btn btn-danger" type="submit" onclick="feedbackDeletedAlert()">Confirm</button>
   
 </form>
 {%endblock content%}
