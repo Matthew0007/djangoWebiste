@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
-
 {% load crispy_forms_tags %}
-
 {% block content %}
 
 <script>
@@ -9,10 +7,46 @@
     alert("Message sent!")
   }
 </script>
-<h1>Contact Us!</h1>
-  <form method="post" novalidate>
-    {% csrf_token %}
-    {{ form|crispy }}
-    <button type="submit" class="btn btn-success" onclick="messageSentAlert()">Submit</button>
-  </form>
-{% endblock %}
+
+<h1 style="padding-top: 20px;">Contact Us!</h1>
+    <div style="padding-top: 20px;">
+      <form method="post" novalidate>
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-success" onclick="messageSentAlert()">Submit</button>
+      </form>
+    <div style="padding-top: 40px;">
+    
+      <table class="table" tableid="table1">
+      <h4 style="padding-bottom: 20px;">Alternative ways to find us!</h2>
+        <thead>
+          <tr>
+            <td>Phone ☎️</td>
+            <td>Fax 📠</td>
+            <td>Address 🏢</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>(01) 626 0066</td>
+            <td>(01) 626 0067</td>
+            <td>250 Grand Canal Dock, Dublin 2</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <div class="mapouter">
+    <div class="gmap_canvas">
+      <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=grand%20canal%20dock%20station&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    </div>
+    <style>
+      .mapouter{position:relative;text-align:right;height:500px;width:600px;}
+      .gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}
+    </style>
+  </div>
+    
+  <hr style="margin-top: 50px;"></hr>
+    
+  {% endblock %}
