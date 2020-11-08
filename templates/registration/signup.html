@@ -4,17 +4,20 @@
 {% block content%}
 
 
-<h1>SIGN UP PAGE</h1>
+
 
 <script>
     function signUpAlert(){
-        alert("Sign up succesful!")
+        alert("Sign up succesful!");
     }
 </script>
-
-<form class="pb-5 mb-3" method="post ">
+<div style="display: flex; justify-content: center;">
+<form style="width:20vw" class="pb-5 mb-5" method="post ">
+    <h1>SIGN UP PAGE</h1>
     {% csrf_token %}
     {{ form|crispy }}
     <button class="btn btn-danger" type="submit" onclick="signUpAlert()">Sign Up</button>
 </form>
+</div>
+
 {% endblock content%}
