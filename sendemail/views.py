@@ -21,4 +21,4 @@ def contactView(request):
     return render(request, "email.html", {'form': form})
 
 def successView(request):
-    return HttpResponse('Success! Thank you for your message.')
+    return redirect('contact')
