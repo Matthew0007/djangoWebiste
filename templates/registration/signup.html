@@ -2,13 +2,13 @@
 {% load crispy_forms_tags %}
 
 {% block content%}
-
-
-<h1>SIGN UP PAGE</h1>
-
-<form class="pb-5 mb-3" method="post ">
+ <h1>SIGN UP PAGE</h1>
+<div style="display: flex; justify-content: center;">
+<form style="width:20vw" class="pb-5 mb-5" method="post ">
     {% csrf_token %}
     {{ form|crispy }}
     <button class="btn btn-danger" type="submit" onclick="signUpAlert()">Sign Up</button>
 </form>
+</div>
+
 {% endblock content%}
