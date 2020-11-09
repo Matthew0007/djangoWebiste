@@ -1,6 +1,5 @@
 from django.db import models
 from django.conf import settings
-
 from django.contrib.auth import get_user_model
 from django.urls import reverse
 
@@ -13,8 +12,6 @@ class Feedback(models.Model):
         get_user_model(),
         on_delete=models.CASCADE,
     )
-
-
 
 
     def __str__(self):
