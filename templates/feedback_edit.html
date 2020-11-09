@@ -5,12 +5,10 @@
     Edit
 </h1>
 
+    <form action="" method="post">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button class="btn btn-danger" type="submit" onclick="feedbackUpdatedAlert()">Update</button>
+    </form>
 
-<form action="" method="post">{%csrf_token%}
-
-    {{form.as_p}}
-
-    <button class="btn btn-danger" type="submit" onclick="feedbackUpdatedAlert()">Update</button>
-  
-</form>
 {%endblock content%}

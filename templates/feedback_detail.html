@@ -1,6 +1,4 @@
 {% extends 'base.html' %}
-
-
 {% block content %}
 
 <div class="article-entry">
@@ -12,4 +10,5 @@
 <a href="{% url 'feedback_edit' feedback.pk%}" class="btn btn-primary">Edit</a>
 <a href="{% url 'feedback_delete' feedback.pk%}" class="btn btn-danger ">Delete</a>
 <p class="mt-5">All feedback <a href="{% url 'feedback_list' %}">here</a></p>
+
 {% endblock content %}
