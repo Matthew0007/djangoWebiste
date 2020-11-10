@@ -6,7 +6,7 @@
 
 <h1>SIGN UP PAGE</h1>
 
-<form class="pb-5 mb-3" method="post ">
+<form method="post">
     {% csrf_token %}
     {{ form|crispy }}
     <button class="btn btn-danger" type="submit" onclick="signUpAlert()">Sign Up</button>

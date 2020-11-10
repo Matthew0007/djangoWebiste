@@ -20,13 +20,15 @@
                 <a href="{%url 'feedback_edit' feedback.pk%}" class="btn btn-primary">Edit</a>
                 <a href="{%url 'feedback_delete' feedback.pk%}" class="btn btn-danger">Delete</a>
 
-              </div>
-              </div>
-              <br>
+            </div>
+        </div>
+        <br>
       
         
     {% endfor %}
-    <a class="btn btn-danger" href="{% url 'feedback_new' %}">New</a>
+    <div style="padding-bottom: 20em;">
+        <a class="btn btn-danger" href="{% url 'feedback_new' %}">New</a>
+    </div>
    
 
    {% else %}
@@ -40,9 +42,9 @@
                 <p class="card-text">{{feedback.feedback}}</p>
                 <p class="card-text small disabled">{{feedback.date}}</p>
 
-              </div>
-              </div>
-              <br>
+            </div>
+        </div>
+        <br>
       
         
     {% endfor %}
