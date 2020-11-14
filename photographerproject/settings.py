@@ -143,3 +143,10 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 DEFAULT_FROM_EMAIL = 'x00179223@mytudublin.ie'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+if ENV_ROLE == 'production':
+    import dj_database_url
+    DATABASES['default'] =  dj_database_url.config()
+
+
+ALLOWED_HOSTS = ['*']
